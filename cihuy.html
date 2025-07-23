@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MochiMania - Toko Mochi Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(240, 192, 200);
+        }
+
+        .product-list {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            width: 200px;
+            border-radius: 8px;
+            background-color: #E0FFFF;
+            box-shadow: 0 0 1rem gray;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 1rem gray;
+        }
+
+        .product img {
+            width: 100%;
+            height: 60%;
+            border-radius: 4px;
+        }
+
+        .product h2 {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .product p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .product button {
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+
+        .product button:hover {
+            padding: 10px;
+            background-color: rgb(255, 102, 1);
+            border: none;
+            border-radius: 4px;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 10px;
+
+        }
+
+        .search-bar input {
+            width: 60%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+            padding: 10px 20px;
+        }
+
+        .home {
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            background-color: #000000;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 0 1rem gray;
+        }
+
+        .search-bar button:hover {
+            background-color: #0056b3;
+        }
+
+        .testimonials {
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .testimonial {
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 1rem gray;
+            font-style: italic;
+        }
+
+        .testimonial p {
+            color: #555;
+        }
+
+        .contact {
+            margin: 0px;
+            margin-bottom: 0px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 1rem gray;
+        }
+
+        .contact h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 5px;
+            line-height: 1.5;
+        }
+
+        .contact p {
+            color: #555;
+            line-height: 1.0;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="search-bar">
+        <input type="text" id="searchInput" placeholder="Cari mochi...">
+        <button onclick="searchProduct()">Cari</button>
+        <section class="home">
+            <a href="bebas.html">
+                <button>home</button>
+            </a>
+            <button onclick="goBack()">Kembali</button>
+        </section>
+    </section>
+    <section class="product-list" id="productList">
+    </section>
+    <section class="product-list">
+        <div class="product">
+            <img src="mochi gtw.jpg" alt="Mochi Kacang">
+            <h2>Mochi mangga</h2>
+            <p>Rp. 9,999</p>
+            <a href="https://wa.me/62895331376961"><button>Beli Sekarang</button></a>
+        </div>
+        <div class="product">
+            <img src="mochi stawberry.jpg" alt="Mochi Stroberi">
+            <h2>Mochi Stroberi</h2>
+            <p>Rp. 8,999</p>
+            <a href="https://wa.me/6288223035819"><button>Beli Sekarang</button></a>
+        </div>
+        <div class="product">
+            <img src="mochi oreo.jpg" alt="Mochi Kacang">
+            <h2>Mochi Oreo</h2>
+            <p>Rp. 8,999</p>
+            <a href="https://wa.me/89636922157"><button>Beli Sekarang</button></a>
+        </div>
+    </section>
+    <section class="product-list">
+        <div class="product">
+            <img src="moci kucing.jpg" alt="Mochi Kacang">
+            <h2>Mochi karakter</h2>
+            <p>Rp. 7,999</p>
+            <a href="wa.me/6283861117667"><button>Beli Sekarang</button></a>
+        </div>
+        <div class="product">
+            <img src="mochi cs.jpg" alt="Mochi Stroberi">
+            <h2>Mochi Coklat Stroberi</h2>
+            <p>Rp. 8,999</p>
+            <a href="wa.me/6289656514991"><button>Beli Sekarang</button></a>
+        </div>
+        <div class="product">
+            <img src="mochi matcha.jpg" alt="Mochi Kacang">
+            <h2>Mochi Matcha</h2>
+            <p>Rp. 9,500</p>
+            <a href="https://wa.me/628993949856"><button>Beli Sekarang</button></a>
+        </div>
+    </section>
+    <section class="testimonials">
+        <h2>Testimoni Pelanggan</h2>
+        <div class="testimonial">
+            <label for="message">Pesan:</label>
+            <textarea id="message" name="message" rows="2" cols="160" required></textarea>
+            <label for="message">Nama :</label>
+            <textarea id="message" name="message" rows="2" cols="160" required></textarea>
+
+        </div>
+
+        <div class="testimonial">
+            <p>"Mochinya enak banget!"</p>
+            <p>- Irsyd & febriel</p>
+        </div>
+        <div class="testimonial">
+            <p>"Rasa mochi yang unik dan lezat!"</p>
+            <p>- sabila & meli </p>
+        </div>
+        <div class="testimonial">
+            <p>"Mochinya lembut!"</p>
+            <p>- rinjani & april</p>
+        </div>
+    </section>
+    <section class="contact">
+        <h2>Kontak Kami</h2>
+        <p>Email: mochimania@contoh.com</p>
+        <p>Telepon: +62 812-3456-7890</p>
+        <p>Alamat: Jl. Mochi Indah No. 123, Bandung</p>
+    </section>
+    </section>
+    <script>
+        function searchProduct() {
+            const searchQuery = document.getElementById("searchInput").value.toLowerCase();
+            const products = document.querySelectorAll(".product");
+
+            products.forEach(product => {
+                const productName = product.querySelector("h2").innerText.toLowerCase();
+                const productDescription = product.querySelector("p").innerText.toLowerCase();
+
+                if (productName.includes(searchQuery) || productDescription.includes(searchQuery)) {
+                    product.style.display = "block";
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        }
+        function goBack() {
+            window.history.back();
+        }
+
+    </script>
+</body>
+
+</html>
