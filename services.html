@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scaled=1.0">
+    <title>Peralatan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: rgb(255, 102, 1);
+            color: rgb(255, 255, 255);
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            margin: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: rgb(255, 102, 1);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 1rem gray;
+            margin-top: 5px;
+            text-align: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product-catalog {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-item {
+
+            border: 0px solid pink;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .product-item img {
+            width: 250px;
+            height: 250px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: rgb(246, 164, 11);
+        }
+
+        footer {
+            background-color: #333;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Bagaimana contoh permainan bola basket❓</h1>
+    </header>
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="about.html">Informasi</a>
+        <a href="services.html">Contoh permainan</a>
+        <a href="contact.html">Join Bersama Kami</a>
+    </nav>
+    <div class="container">
+        <h2>Berikut adalah beberapa contoh dalam permainan bola basket :</h2>
+
+        <div class="product-catalog">
+            <div class="product-item">
+                <img src="1.jpeg" height="20" width="20">
+            </div>
+            <div class="product-item">
+                <img src="2.jpeg" height="20" width="20">
+            </div>
+            <div class="product-item">
+                <img src="3.jpeg" height="20" width="20">
+            </div>
+            <div class="product-item">
+                <img src="4.jpeg" height="20" width="20">
+            </div>
+            <div class="product-item">
+                <img src="5.jpeg" height="20" width="20">
+            </div>
+            <div class="product-item">
+                <img src="6.jpeg" height="20" width="20">
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Situs kami, Semua hak dilindungi.
+    </footer>
+</body>
+
+</html>
